@@ -19,16 +19,7 @@ class AddForeignkeys extends Migration
             $table->foreign('mode_id')->references('id')->on('modes');
             $table->foreign('comment_id')->references('id')->on('comments');
             $table->foreign('qslstatus_id')->references('id')->on('qslstatus');
-            $table->foreign('lotw_qslstatus_id')->references('id')->on('lotw_qslstatus');
-        });
-        Schema::table('comments', function (Blueprint $table) {
-            $table->foreign('qsologs_id')->references('id')->on('qsologs');
-        });
-        Schema::table('qslstatus', function (Blueprint $table) {
-            $table->foreign('qsologs_id')->references('id')->on('qsologs');
-        });
-        Schema::table('lotw_qslstatus', function (Blueprint $table) {
-            $table->foreign('qsologs_id')->references('id')->on('qsologs');
+            $table->foreign('lotwqslstatus_id')->references('id')->on('lotw_qslstatus');
         });
         Schema::enableForeignKeyConstraints();
     }
@@ -47,15 +38,6 @@ class AddForeignkeys extends Migration
             $table->dropForeign('qsologs_comment_id_foreign');
             $table->dropForeign('qsologs_qslstatus_id_foreign');
             $table->dropForeign('qsologs_lotw_qslstatus_id_foreign');
-        });
-        Schema::table('comments', function (Blueprint $table) {
-            $table->dropForeign('comments_qsologs_id');
-        });
-        Schema::table('qslstatus', function (Blueprint $table) {
-            $table->dropForeign('qslstatus_qsologs_id');
-        });
-        Schema::table('lotw_qslstatus', function (Blueprint $table) {
-            $table->dropForeign('lotw_qslstatus_qsologs_id');
         });
         Schema::enableForeignKeyConstraints();
     }

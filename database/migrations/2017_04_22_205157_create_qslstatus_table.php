@@ -15,7 +15,6 @@ class CreateQslstatusTable extends Migration
     {
         Schema::create('qslstatus', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('qsologs_id');
             $table->boolean('qslSent')->default(false);
             $table->date('qslSentDate')->nullable();
             $table->boolean('qslRecv')->default(false);
