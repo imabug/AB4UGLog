@@ -15,7 +15,7 @@ class CreateLotwQslstatusTable extends Migration
     {
         Schema::create('lotw_qslstatus', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('qso_id');
+            $table->integer('qsologs_id');
             $table->boolean('lotwSent')->default(false);
             $table->date('lotwSentDate')->nullable();
             $table->boolean('lotwRecv')->default(false);

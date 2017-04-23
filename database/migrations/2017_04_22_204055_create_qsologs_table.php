@@ -24,9 +24,9 @@ class CreateQsologsTable extends Migration
             $table->integer('power')->unsigned()->nullable();
             $table->unsignedSmallInteger('rstSent')->nullable();
             $table->unsignedSmallInteger('rstRecv')->nullable();
-            $table->integer('qsoComment_id')->unsigned()->nullable();
-            $table->integer('qsl_id')->unsigned()->nullable();
-            $table->integer('lotw_qsl_id')->unsigned()->nullable();
+            $table->integer('comment_id')->unsigned()->nullable();
+            $table->integer('qslstatus_id')->unsigned()->nullable();
+            $table->integer('lotw_qslstatus_id')->unsigned()->nullable();
             $table->integer('qsoGroup')->unsigned()->nullable();
             $table->integer('cqZone')->unsigned()->nullable();
             $table->integer('ituZone')->unsigned()->nullable();
