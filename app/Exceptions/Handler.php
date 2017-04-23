@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Exceptions;
+namespace AB4UGLog\Exceptions;
 
 use Exception;
 use Illuminate\Auth\AuthenticationException;

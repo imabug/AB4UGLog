@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace AB4UGLog\Providers;
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;

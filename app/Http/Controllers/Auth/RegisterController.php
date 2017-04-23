@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace AB4UGLog\Http\Controllers\Auth;
 
-use App\User;
-use App\Http\Controllers\Controller;
+use AB4UGLog\User;
+use AB4UGLog\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace AB4UGLog\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
+use AB4UGLog\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller

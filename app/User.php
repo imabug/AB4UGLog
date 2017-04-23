@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace AB4UGLog;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;

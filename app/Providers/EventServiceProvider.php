@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace AB4UGLog\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\Event' => [
-            'App\Listeners\EventListener',
+        'AB4UGLog\Events\Event' => [
+            'AB4UGLog\Listeners\EventListener',
         ],
     ];
 
