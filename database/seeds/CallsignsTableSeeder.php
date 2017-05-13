@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 class CallsignsTableSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Seed the callsign table with random call signs.
      *
      * @return void
      */
