@@ -15,7 +15,7 @@ class CreateModesTable extends Migration
     {
         Schema::create('modes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('mode', 10);
+            $table->string('mode', 50);
             $table->softDeletes();
             $table->timestamps();
         });
