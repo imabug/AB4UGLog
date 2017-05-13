@@ -36,3 +36,4 @@ class Comment extends Model
     {
         return $this->belongsTo('AB4UGLog\QsoLog');
     }
+}
