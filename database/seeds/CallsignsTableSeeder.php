@@ -1,5 +1,6 @@
 <?php
 
+use AB4UGLog\Callsign;
 use Illuminate\Database\Seeder;
 
 class CallsignsTableSeeder extends Seeder
@@ -11,12 +12,13 @@ class CallsignsTableSeeder extends Seeder
      */
     public function run()
     {
-        // Insert 20 random calls into the callsigns table
-        for ($i=0; $i < 20; $i++)
+        // Insert 50 random calls into the callsigns table
+        for ($i=0; $i < 50; $i++)
         {
-            DB::table('callsigns')->insert([
-                'callsign' => $this->randCall(),
-            ]);
+            $callsign = new Callsign;
+            $callsign->fill([
+                'callsign' => $this->randCall()
+            ])->save();
         }
     }
 
@@ -30,10 +32,10 @@ class CallsignsTableSeeder extends Seeder
         // Generate a random call sign based on US call sign rules
         // https://www.fcc.gov/wireless/bureau-divisions/mobility-division/amateur-radio-service/amateur-call-sign-systems#block-menu-block-4
 
-        $prefix = ['a','k','n','w'];
-        $letter = ['a','b','c','d','e','f','g','h','i','j','k','l',
-                   'm','n','o','p','q','r','s','t','u','v','w','x',
-                   'y','z'];
+        $prefix = ['A','K','N','W'];
+        $letter = ['A','B','C','D','E','F','G','H','I','J','K','L',
+                   'M','N','O','P','Q','R','S','T','U','V','W','X',
+                   'Y','Z'];
         $prefixLen = count($prefix)-1;
         $letterLen = count($letter)-1;
 
