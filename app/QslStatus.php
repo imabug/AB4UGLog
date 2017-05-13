@@ -10,7 +10,7 @@ class QslStatus extends Model
     use SoftDeletes;
 
     /**
-     * Table associated with the model
+     * Table associated with the model.
      *
      * @var string
      */
