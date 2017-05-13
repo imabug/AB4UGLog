@@ -13,6 +13,7 @@
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.4",
         "nesbot/carbon": "^1.22",
+        "tcg/voyager": "^0.11.10",
         "twbs/bootstrap": "^3.3"
     },
     "require-dev": {
