@@ -33,11 +33,11 @@ class CallsignsTableSeeder extends Seeder
         // https://www.fcc.gov/wireless/bureau-divisions/mobility-division/amateur-radio-service/amateur-call-sign-systems#block-menu-block-4
 
         $prefix = ['A','K','N','W'];
-        $letter = ['A','B','C','D','E','F','G','H','I','J','K','L',
+        $suffix = ['A','B','C','D','E','F','G','H','I','J','K','L',
                    'M','N','O','P','Q','R','S','T','U','V','W','X',
                    'Y','Z'];
         $prefixLen = count($prefix)-1;
-        $letterLen = count($letter)-1;
+        $suffixLen = count($suffix)-1;
 
         $call = '';
         switch (random_int(0,5))
@@ -45,60 +45,60 @@ class CallsignsTableSeeder extends Seeder
             case 0: // 1x1 call sign
                 $call .= $prefix[random_int(0, $prefixLen)];
                 $call .= random_int(0,9);
-                $call .= $letter[random_int(0, $letterLen)];
+                $call .= $suffix[random_int(0, $suffixLen)];
                 break;
             case 1: // 1x2 call sign
                 $call .= $prefix[random_int(0, $prefixLen)];
                 $call .= random_int(0,9);
-                $call .= $letter[random_int(0, $letterLen)];
-                $call .= $letter[random_int(0, $letterLen)];
+                $call .= $suffix[random_int(0, $suffixLen)];
+                $call .= $suffix[random_int(0, $suffixLen)];
                 break;
             case 2: // 1x3 call sign
                 $call .= $prefix[random_int(0, $prefixLen)];
                 $call .= random_int(0,9);
-                $call .= $letter[random_int(0, $letterLen)];
-                $call .= $letter[random_int(0, $letterLen)];
-                $call .= $letter[random_int(0, $letterLen)];
+                $call .= $suffix[random_int(0, $suffixLen)];
+                $call .= $suffix[random_int(0, $suffixLen)];
+                $call .= $suffix[random_int(0, $suffixLen)];
                 break;
             case 3: // 2x1 call sign
                 $call .= $prefix[random_int(0, $prefixLen)];
                 if ($call == 'A') {
                     // Only A[A-L] are valid 2xn calls
-                    $call .= $letter[random_int(0, 12)];
+                    $call .= $suffix[random_int(0, 12)];
                 }
                 else {
-                    $call .= $letter[random_int(0, $letterLen)];
+                    $call .= $suffix[random_int(0, $suffixLen)];
                 }
                 $call .= random_int(0,9);
-                $call .= $letter[random_int(0, $letterLen)];
+                $call .= $suffix[random_int(0, $suffixLen)];
                 break;
             case 4: // 2x2 call sign
                 $call .= $prefix[random_int(0, $prefixLen)];
                 if ($call == 'A') {
                     // Only A[A-L] are valid 2xn calls
-                    $call .= $letter[random_int(0, 12)];
+                    $call .= $suffix[random_int(0, 11)];
                 }
                 else {
-                    $call .= $letter[random_int(0, $letterLen)];
+                    $call .= $suffix[random_int(0, $suffixLen)];
                 }
                 $call .= random_int(0,9);
-                $call .= $letter[random_int(0, $letterLen)];
-                $call .= $letter[random_int(0, $letterLen)];
+                $call .= $suffix[random_int(0, $suffixLen)];
+                $call .= $suffix[random_int(0, $suffixLen)];
                 break;
             case 5: // 2x3 call sign
             default:
                 $call .= $prefix[random_int(0, $prefixLen)];
                 if ($call == 'A') {
                     // Only A[A-L] are valid 2xn calls
-                    $call .= $letter[random_int(0, 12)];
+                    $call .= $suffix[random_int(0, 12)];
                 }
                 else {
-                    $call .= $letter[random_int(0, $letterLen)];
+                    $call .= $suffix[random_int(0, $suffixLen)];
                 }
                 $call .= random_int(0,9);
-                $call .= $letter[random_int(0, $letterLen)];
-                $call .= $letter[random_int(0, $letterLen)];
-                $call .= $letter[random_int(0, $letterLen)];
+                $call .= $suffix[random_int(0, $suffixLen)];
+                $call .= $suffix[random_int(0, $suffixLen)];
+                $call .= $suffix[random_int(0, $suffixLen)];
                 break;
         }
 
