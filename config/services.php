@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => AB4UGLog\User::class,
+        'model' => App\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

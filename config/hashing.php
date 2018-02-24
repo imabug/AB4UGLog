@@ -1,5 +1,7 @@
 <?php
+
 return [
+
     /*
     |--------------------------------------------------------------------------
     | Default Hash Driver
@@ -12,5 +14,7 @@ return [
     | Supported: "bcrypt", "argon"
     |
     */
+
     'driver' => 'bcrypt',
+
 ];
