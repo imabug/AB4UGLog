@@ -3,6 +3,7 @@
 namespace AB4UGLog\Http\Controllers\Auth;
 
 use AB4UGLog\User;
+use Illuminate\Support\Facades\Hash;
 use AB4UGLog\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -65,7 +66,7 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'password' => Hash::make($data['password']),
         ]);
     }
 }
