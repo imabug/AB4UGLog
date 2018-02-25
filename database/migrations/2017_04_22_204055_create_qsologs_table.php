@@ -15,21 +15,22 @@ class CreateQsologsTable extends Migration
     {
         Schema::create('qsologs', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('logbook_id')->unsigned();
             $table->date('qsoDate');
             $table->time('qsoTime')->nullable();
-            $table->decimal('frequency', 12, 4)->nullable();
-            $table->unsignedInteger('callsign_id');
+            $table->decimal('frequency', 12, 4)->nullable()->comment('Frequency in MHz');
+            $table->integer('callsign_id')->unsigned();
             $table->string('name', 50)->nullable();
-            $table->unsignedInteger('mode_id')->nullable();
-            $table->unsignedInteger('power')->nullable();
-            $table->unsignedSmallInteger('rstSent')->nullable();
-            $table->unsignedSmallInteger('rstRecv')->nullable();
-            $table->unsignedInteger('comment_id')->nullable();
-            $table->unsignedInteger('qslstatus_id')->nullable();
-            $table->unsignedInteger('lotwqslstatus_id')->nullable();
-            $table->unsignedInteger('qsoGroup')->nullable();
-            $table->unsignedTinyInteger('cqZone')->nullable();
-            $table->unsignedTinyInteger('ituZone')->nullable();
+            $table->integer('mode_id')->unsigned()->nullable();
+            $table->integer('power')->unsigned()->nullable();
+            $table->smallInteger('rstSent')->unsigned()->nullable();
+            $table->smallInteger('rstRecv')->unsigned()->nullable();
+            $table->integer('comment_id')->unsigned()->nullable();
+            $table->integer('qslstatus_id')->unsigned()->nullable();
+            $table->integer('lotwqslstatus_id')->unsigned()->nullable();
+            $table->integer('qsoGroup')->unsigned()->nullable();
+            $table->tinyInteger('cqZone')->unsigned()->nullable();
+            $table->tinyInteger('ituZone')->unsigned()->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
