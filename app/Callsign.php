@@ -5,6 +5,10 @@ namespace AB4UGLog;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * Model file for the callsign table
+ * This table holds a list of call signs
+ */
 class Callsign extends Model
 {
     use SoftDeletes;

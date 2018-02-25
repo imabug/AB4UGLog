@@ -5,6 +5,11 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * Model file for the logbook table
+ * Used to group QSOs together. For example, a separate logbook can be
+ * created for contacts made during a contest.
+ */
 class LogBook extends Model
 {
     use SoftDeletes;

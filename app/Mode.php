@@ -5,6 +5,10 @@ namespace AB4UGLog;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * Model file for the mode table
+ * Lookup table for different modes, i.e. phone, CW, etc
+ */
 class Mode extends Model
 {
     use SoftDeletes;
@@ -15,7 +19,7 @@ class Mode extends Model
      * @var array
      */
     protected $fillable = [
-        'mode',
+        'modes',
     ];
 
     /**

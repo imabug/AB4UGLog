@@ -5,6 +5,10 @@ namespace AB4UGLog;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * Model file for the comment table
+ * Comments associated with each QSO
+ */
 class Comment extends Model
 {
     use SoftDeletes;

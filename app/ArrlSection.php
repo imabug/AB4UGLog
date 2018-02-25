@@ -5,6 +5,10 @@ namespace AB4UGLog;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * Model file for the arrl_sec table
+ * Lookup table for ARRL section and section names
+ */
 class ArrlSection extends Model
 {
     use SoftDeletes;

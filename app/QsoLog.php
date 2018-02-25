@@ -5,6 +5,10 @@ namespace AB4UGLog;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * Model file for the qsologs table
+ * This table tracks all the QSOs. 
+ */
 class QsoLog extends Model
 {
     use SoftDeletes;

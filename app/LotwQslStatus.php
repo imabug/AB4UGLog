@@ -5,6 +5,10 @@ namespace AB4UGLog;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * Model file for the lotw_qslstatus table
+ * Used to track LoTW QSL confirmations.
+ */
 class LotwQslStatus extends Model
 {
     use SoftDeletes;
