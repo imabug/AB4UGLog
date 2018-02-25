@@ -22,13 +22,19 @@ class QsoLog extends Model
      * @var array
      */
     protected $fillable = [
+        'logbook_id',
         'qsoDate',
         'qsoTime',
         'frequency',
+        'callsign_id',
         'name',
+        'mode_id',
         'power',
         'rstSent',
         'rstRecv',
+        'comment_id',
+        'qslstatus_id',
+        'lotwqslstatus_id',
         'qsoGroup',
         'cqZone',
         'ituZone',
@@ -48,6 +54,11 @@ class QsoLog extends Model
     /*
      * Relationships
      */
+    public function logbook()
+    {
+      return $this->belongsTo('AB4UG\LogBook');
+    }
+
     public function callsign()
     {
         return $this->belongsTo('AB4UGLog\Callsign');
