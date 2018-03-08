@@ -1,7 +1,7 @@
 <?php
 
-use AB4UGLog\ArrlSection;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ArrlSectionTableSeeder extends Seeder
 {
@@ -46,13 +46,10 @@ class ArrlSectionTableSeeder extends Seeder
         ];
 
         foreach ($arrlSec as $sec => $name) {
-            $section = ArrlSection::firstOrNew(['section' => $sec]);
-            if (! $section->exists) {
-                $section->fill([
-                    'section' => $sec,
-                    'section_name' => $name
-                    ])->save();
-            }
+            DB::table('arrl_sec')->insert([
+                'section' => $sec,
+                'section_name' => $name,
+            ]);
         }
     }
 }

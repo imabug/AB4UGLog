@@ -1,7 +1,7 @@
 <?php
 
-use AB4UGLog\Mode;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ModesTableSeeder extends Seeder
 {
@@ -28,10 +28,9 @@ class ModesTableSeeder extends Seeder
         ];
 
         foreach ($modes as $m) {
-            $mode = Mode::firstOrNew(['mode' => $m]);
-            if (! $mode->exists) {
-                $mode->fill(['mode' => $m])->save();
-            }
+            DB::table('modes')->insert([
+                'mode' => $m,
+            ]);
         }
     }
 }

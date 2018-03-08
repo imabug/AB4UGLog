@@ -1,7 +1,7 @@
 <?php
 
-use AB4UGLog\Callsign;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CallsignsTableSeeder extends Seeder
 {
@@ -13,12 +13,11 @@ class CallsignsTableSeeder extends Seeder
     public function run()
     {
         // Insert 50 random calls into the callsigns table
-        for ($i=0; $i < 50; $i++)
+        for ($i=0; $i < 500; $i++)
         {
-            $callsign = new Callsign;
-            $callsign->fill([
-                'callsign' => $this->randCall()
-            ])->save();
+            DB::table('callsigns')->insert([
+                'callsign' => $this->randCall(),
+            ]);
         }
     }
 
