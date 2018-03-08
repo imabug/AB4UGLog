@@ -38,6 +38,6 @@ class Mode extends Model
      */
     public function qso()
     {
-        return $this->belongsTo('AB4UGLog\QsoLog');
+        return $this->hasMany('AB4UGLog\QsoLog');
     }
 }

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Model file for the qsologs table
- * This table tracks all the QSOs. 
+ * This table tracks all the QSOs.
  */
 class QsoLog extends Model
 {
@@ -70,7 +70,7 @@ class QsoLog extends Model
 
     public function mode()
     {
-        return $this->hasOne('AB4UGLog\Mode');
+        return $this->belongsTo('AB4UGLog\Mode');
     }
 
     public function comment()
