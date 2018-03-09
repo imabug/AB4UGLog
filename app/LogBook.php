@@ -15,6 +15,13 @@ class LogBook extends Model
     use SoftDeletes;
 
     /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'logbooks';
+
+    /**
      * Attributes that are mass assignable.
      *
      * @var array
