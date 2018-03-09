@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use AB4UG\LogBook;
 use Illuminate\Http\Request;
 
-class LogBook extends Controller
+class LogBookController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,8 @@ class LogBook extends Controller
      */
     public function index()
     {
-        //
+        $logbooks = LogBook::get();
+        return view('home', $logbooks);
     }
 
     /**
