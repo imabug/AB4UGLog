@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace AB4UGLog;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;

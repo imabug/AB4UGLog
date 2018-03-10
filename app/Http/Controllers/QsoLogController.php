@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace AB4UGLog\Http\Controllers;
 
 use Illuminate\Http\Request;
 

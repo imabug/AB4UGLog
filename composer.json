@@ -27,7 +27,7 @@
             "database/factories"
         ],
         "psr-4": {
-            "App\\": "app/"
+            "AB4UGLog\\": "app/"
         }
     },
     "autoload-dev": {
