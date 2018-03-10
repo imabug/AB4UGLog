@@ -11,6 +11,7 @@
 |
 */
 
-Route::name('index')->get('/', 'LogBookController@index');
+Route::name('index')->get('/', 'HomeController@index');
+Route::name('logbook.get')->post('logbook/get', 'LogBookController@get');
 Route::resource('logbook', 'LogBookController');
 Route::resource('qsolog', 'QsoLogController');

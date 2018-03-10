@@ -2,6 +2,7 @@
 
 namespace AB4UGLog\Http\Controllers;
 
+use AB4UGLog\LogBook;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -23,6 +24,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $logbooks = LogBook::get();
+        if ($logbooks->count() > 0) {
+            return view('home', [
+                'logbooks' => $logbooks]);
+        } else {
+            return view('logbooks.logbook_create');
+        }
     }
 }
