@@ -26,6 +26,21 @@
                         </div>
                     </form>
                 </div>
+                <div class="panel-heading">New logbook</div>
+                <div class="panel-body">
+                    <form class="" action="{{route('logbook.store')}}" method="post">
+                        <div class="form-group">
+                            @csrf
+                        </div>
+                        <div class="form-group">
+                            <label for="logname">Create new logbook: </label>
+                            <input class="form-control" type="text" id="logname" name="logname" size="30">
+                        </div>
+                        <div class="form-group">
+                            <button class="form-control" type="SUBMIT">Create logbook</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
