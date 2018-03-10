@@ -11,8 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::name('index')->get('/', 'LogBookController@index');
+Route::resource('logbook', 'LogBookController');
 Route::resource('qsolog', 'QsoLogController');
