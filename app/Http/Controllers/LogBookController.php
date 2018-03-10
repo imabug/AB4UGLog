@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace AB4UGLog\Http\Controllers;
 
-use AB4UG\LogBook;
+use AB4UGLog\LogBook;
 use Illuminate\Http\Request;
 
 class LogBookController extends Controller
@@ -15,7 +15,11 @@ class LogBookController extends Controller
     public function index()
     {
         $logbooks = LogBook::get();
-        return view('home', $logbooks);
+        if ($logbooks->count() > 0) {
+            return view('home', $logbooks);
+        } else {
+            return view('logbooks.logbook_create');
+        }
     }
 
     /**
