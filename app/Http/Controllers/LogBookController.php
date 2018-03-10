@@ -4,6 +4,8 @@ namespace AB4UGLog\Http\Controllers;
 
 use AB4UGLog\LogBook;
 use Illuminate\Http\Request;
+use AB4UGLog\Http\Requests\GetLogBookRequest;
+use AB4UGLog\Http\Requests\StoreLogBookRequest;
 
 class LogBookController extends Controller
 {
@@ -14,12 +16,6 @@ class LogBookController extends Controller
      */
     public function index()
     {
-        $logbooks = LogBook::get();
-        if ($logbooks->count() > 0) {
-            return view('home', $logbooks);
-        } else {
-            return view('logbooks.logbook_create');
-        }
     }
 
     /**
@@ -29,18 +25,35 @@ class LogBookController extends Controller
      */
     public function create()
     {
-        //
+        return view('logbooks.logbook_create');
+    }
+
+    /**
+     * Get a logbook
+     *
+     * @param AB4UGLog\Http\Requests\GetLogBookRequest $request
+     * @return \Illuminate\Http\Response
+     */
+    public function get(GetLogBookRequest $request)
+    {
+        return view('logbooks.logbook_show', ['id' => $request->logbookId]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  AB4UGLog\Http\Requests\StoreLogBookRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreLogBookRequest $request)
     {
-        //
+        $logbook = LogBook::create([
+            'logbook' => $request->logname,
+        ]);
+
+        $logbooks = LogBook::get();
+
+        return view('home', $logbooks);
     }
 
     /**
@@ -51,7 +64,7 @@ class LogBookController extends Controller
      */
     public function show($id)
     {
-        //
+        $logbook = LogBook::find($id);
     }
 
     /**
