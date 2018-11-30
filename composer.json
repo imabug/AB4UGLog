@@ -1,7 +1,11 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "imabug/AB4UGLog",
+    "description": "AB4UG Web Logging",
+    "keywords": [
+        "laravel",
+        "amateur radio",
+        "logging"
+    ],
     "license": "MIT",
     "type": "project",
     "require": {
@@ -9,9 +13,11 @@
         "consoletvs/charts": "^6.0",
         "doctrine/dbal": "^2.6",
         "fideloper/proxy": "~4.0",
-        "laravel/framework": "5.6.*",
+        "laravel/dusk": "^4.0",
+        "laravel/framework": "^5.7",
         "laravel/tinker": "~1.0",
-        "laravelcollective/html": "^5.6"
+        "spatie/laravel-medialibrary": "^7.5",
+        "twbs/bootstrap": "^4.1"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
